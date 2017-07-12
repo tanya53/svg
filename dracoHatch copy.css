@@ -5,9 +5,7 @@
   perspective: 600px;
   height:100%;
   width:100%;
-  background-color:#170F0D;
 }
-
 svg {
   border: 2px solid red;
 }
@@ -27,7 +25,4 @@ path {
 }
 #draco {
   opacity:0;
-}
-#dracoDot {
-  fill:white;
 }
