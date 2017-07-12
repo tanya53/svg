@@ -1,0 +1,59 @@
+svg {width:100%;
+    height:auto;
+    background-color:white;}
+.ball3 {
+  animation: second-animation 5s infinite;
+}
+.ball2 {
+  animation :first-animation .5s infinite;
+}
+#layer1 {
+  transform-origin: 350px 450px;
+  animation : third-animation 5s infinite;
+}
+
+@keyframes first-animation {
+  0% {
+    fill: yellow;
+    /*transform : translateX(0);*/
+    r:15;
+    opacity:1;
+  }
+  50% {
+    fill:yellow;
+  /*  transform : translateX(50px);*/
+    r : 25;
+    opacity:0;
+  }
+  100% {
+    fill:yellow;
+  /*  transform : translate(100px);*/
+    r:15;
+    opcity:1;
+  }
+}
+@keyframes second-animation {
+  0% {
+    fill: blue;
+    transform : translateX(0);
+    r:25;
+  }
+  50% {
+    fill: purple;
+    transform : translateX(50px);
+    r : 15;
+  }
+  100% {
+    fill: red;
+    transform : translate(100px);
+    r:25;
+  }
+}
+@keyframes third-animation {
+
+
+  100% {
+    transform :rotate(-90deg);
+  }
+
+}

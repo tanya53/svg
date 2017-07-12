@@ -1,0 +1,45 @@
+/*
+================================
+A sample transition */
+.paw {
+  transition: transform .25s ease-in-out;
+}
+
+.playing .paw {
+  transform: translateX(30px);
+
+}
+
+
+/*
+================================
+Your code here! */
+
+/* Double hint: Don't forget about transition-delay! */
+.ball {
+  transition: transform 2s cubic-bezier(0.445,0.05,0.55,0.95),background-color 1s .25s;
+}
+.playing .ball {
+
+  transform: translateX(600px);
+  background-color: red;
+}
+
+/*
+================================
+Necessary CSS Below-- no need to edit */
+
+.paw {
+  position: absolute; top: 0; left: 80px;
+}
+
+.ball {
+  background: #0097C0;
+  border-radius: 50%;
+  position: absolute; top: 200px; left: 160px;
+  width: 100px; height: 100px;
+}
+
+body { background: #e3edf2; }
+
+/* CP_DoFullRefresh */

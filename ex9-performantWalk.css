@@ -1,0 +1,19 @@
+.tuna {
+  /* steps causes the animation to chunk into 12 equal pieces */
+  background: red;
+  height: 200px;
+  width: 400px;
+  overflow:hidden;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+img {
+    animation: walk-cycle 1s steps(12) infinite;
+}
+@keyframes walk-cycle {
+  100% {transform: translateY(-100%)} /* Must be full height of sprite or skipping will happen.*/
+}
+
+p {text-align: center;}

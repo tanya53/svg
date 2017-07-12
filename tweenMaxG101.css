@@ -1,0 +1,49 @@
+#boxHTML{
+  width:200px;
+  height:200px;
+  background-color:#2B4D66;
+  opacity:0.8;
+  position:relative;
+  border:1px solid blue;
+}
+p {margin:0;
+  font-size:40px;
+  position:absolute;
+  bottom:30px;
+  width:100%;
+  text-align:center;
+  color:#fff;}
+
+  #htmlDOT{
+    width:40px;
+    height:40px;
+    border-radius:100%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background-color:#b1dec7;
+    border:1px solid red;
+  }
+#boxHTML, #boxSVG {
+  position:absolute;
+  top:0;
+  left:0;
+}
+#btnNext{
+  position:absolute;
+  top:400px;
+  left:30px;
+}
+#btnPrev{
+  position:absolute;
+  top:400px;
+  left:100px;
+}
+/* for 3d spin at end */
+.perspective {
+  position: absolute;
+  perspective: 600px;
+  height:100%;
+  width:100%;
+}

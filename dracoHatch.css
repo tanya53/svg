@@ -1,0 +1,28 @@
+
+/* for 3d spin at end */
+.perspective {
+  position: absolute;
+  perspective: 600px;
+  height:100%;
+  width:100%;
+}
+svg {
+  border: 2px solid red;
+}
+path {
+   stroke:black;
+   stroke-width:.25;
+   opacity:.5;
+}
+
+#poly1 {fill:red;}
+#poly2 {fill:blue;}
+#poly3 {fill:purple;}
+#poly4 {fill:yellow;}
+#polyt1,#polyt2,#polyt3,#polyt4,#polyt1a,
+#polyt2a,#polyt3a,#polyt4a {
+  visibility: hidden;
+}
+#draco {
+  opacity:0;
+}

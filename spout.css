@@ -1,0 +1,56 @@
+svg {width:100%;
+    height:auto;
+    background-color:white;
+    border:2px solid black;}
+
+ #layer1 {
+   transform-origin: center 500px;
+   animation: third-animation 5s forwards;
+ }
+ #critter {
+   fill:blue;
+   animation: ball-rise 10s forwards;
+ }
+.ball-fall#critter{
+  fill:green;
+  transform-origin:0% 0%;
+
+}
+ .testline {
+   stroke:red;
+   stroke-width:10px;
+   stroke-dasharray:1000;
+   stroke-dashoffset:1000;
+   fill:none;
+   animation: dash 5s cubic-bezier(.44,.21,1,.86)forwards;
+ }
+
+@keyframes dash {
+  to {
+    stroke-dashoffset:0;
+  }
+}
+@keyframes third-animation {
+  0% {
+
+    transform:  scale(.2);
+  }
+
+  100%{
+    transform: translateY(-200px) scale(.75);
+  }
+}
+@keyframes ball-rise {
+  50% {
+    transform : translateY(-300px);
+  }
+  75% {
+    transform:rotate(180deg);
+  }
+  85%{
+    transform:rotate(-180deg);
+  }
+  100% {
+    transform :translate(200px,200px);
+  }
+}
