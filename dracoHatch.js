@@ -20,29 +20,77 @@ $(window).on('load',function(){
     //egg disappears so draco appears
     .to(dracoDot,1,{opacity:0,ease:Power2.easeInOut},7.5)
     //parts of shell morph at end morph triangle => circle => star
-    .to([poly1,poly2,poly3,poly4],.5,{opacity:1,ease:Power2.InOut},7)
-    .to(poly1,1,{morphSVG:"#polyt1"},7)
-    .to(poly2,1,{morphSVG:"#polyt2"},7)
-    .to(poly3,1,{morphSVG:"#polyt3"},7)
-    .to(poly4,1,{morphSVG:"#polyt4"},7)
-    .to(poly1,1,{morphSVG:"#polyt1a"},8)
-    .to(poly2,1,{morphSVG:"#polyt2a"},8)
-    .to(poly3,1,{morphSVG:"#polyt3a"},8)
-    .to(poly4,1,{morphSVG:"#polyt4a"},8)
+    .to(["#poly1ta","#poly1tb","#poly1tc","#poly1td",
+         "#poly2ta","#poly2tb","#poly2tc","#poly2td",
+         "#poly3ta","#poly3tb","#poly3tc","#poly3td",
+         "#poly4ta","#poly4tb","#poly4tc","#poly4td"
+         ],.5,{opacity:1,ease:Power2.InOut},7)
+    .to("#poly1ta",1,{morphSVG:"#polyc1a"},7) //to circles
+    .to("#poly1tb",1,{morphSVG:"#polyc1b"},7)
+    .to("#poly1tc",1,{morphSVG:"#polyc1c"},7)
+    .to("#poly1td",1,{morphSVG:"#polyc1d"},7)
+    .to("#poly2ta",1,{morphSVG:"#polyc2a"},7)
+    .to("#poly2tb",1,{morphSVG:"#polyc2b"},7)
+    .to("#poly2tc",1,{morphSVG:"#polyc2c"},7)
+    .to("#poly2td",1,{morphSVG:"#polyc2d"},7)
+    .to("#poly3ta",1,{morphSVG:"#polyc3a"},7)
+    .to("#poly3tb",1,{morphSVG:"#polyc3b"},7)
+    .to("#poly3tc",1,{morphSVG:"#polyc3c"},7)
+    .to("#poly3td",1,{morphSVG:"#polyc3d"},7)
+    .to("#poly4ta",1,{morphSVG:"#polyc4a"},7)
+    .to("#poly4tb",1,{morphSVG:"#polyc4b"},7)
+    .to("#poly4tc",1,{morphSVG:"#polyc4c"},7)
+    .to("#poly4td",1,{morphSVG:"#polyc4d"},7)
+
+    .to("#poly1ta",1,{morphSVG:"#polyf1a"},8)  //to flowers
+    .to("#poly1tb",1,{morphSVG:"#polyf1b"},8)
+    .to("#poly1tc",1,{morphSVG:"#polyf1c"},8)
+    .to("#poly1td",1,{morphSVG:"#polyf1d"},8)
+
+    .to("#poly2ta",1,{morphSVG:"#polyf2a"},8)
+    .to("#poly2tb",1,{morphSVG:"#polyf2b"},8)
+    .to("#poly2tc",1,{morphSVG:"#polyf2c"},8)
+    .to("#poly2td",1,{morphSVG:"#polyf2d"},8)
+
+    .to("#poly3ta",1,{morphSVG:"#polyf3a"},8)
+    .to("#poly3tb",1,{morphSVG:"#polyf3b"},8)
+    .to("#poly3tc",1,{morphSVG:"#polyf3c"},8)
+    .to("#poly3td",1,{morphSVG:"#polyf3d"},8)
+
+    .to("#poly4ta",1,{morphSVG:"#polyf4a"},8)
+    .to("#poly4tb",1,{morphSVG:"#polyf4b"},8)
+    .to("#poly4tc",1,{morphSVG:"#polyf4c"},8)
+    .to("#poly4td",1,{morphSVG:"#polyf4d"},8)
 
     //shell turns opacity back and shells disappear
-    .to([poly1,poly2,poly3,poly4],.5,{opacity:0.5,ease:Power2.InOut},8)
-    .to(poly1,3,{scale:0.001,rotation:720,x:50,y:50,ease:Power2.easeInOut},8.5)
-    .to(poly2,3,{scale:0.001,rotation:720,x:0,y:0,ease:Power2.easeInOut},8.5)
-    .to(poly3,3,{scale:0.001,rotation:720,x:125,y:75,ease:Power2.easeInOut},8.5)
-    .to(poly4,3,{scale:0.001,rotation:720,ease:Power2.easeInOut},8.5)
-    //.to("#draco",.5,{scale:1.5,opacity:1},7.5)
-    .to("#draco",10,{scale:3,opacity:1,x:300,y:-500},8)
+    .to(["#poly1ta","#poly1tb","#poly1tc","#poly1td",
+         "#poly2ta","#poly2tb","#poly2tc","#poly2td",
+         "#poly3ta","#poly3tb","#poly3tc","#poly3td",
+         "#poly4ta","#poly4tb","#poly4tc","#poly4td"],.5,{opacity:0.5,ease:Power2.InOut},8)
+    .to("#poly1ta",3,{scale:0.001,x:50,y:50,ease:Power2.InOut},8.5)
+    .to("#poly1tb",3,{scale:0.001,x:0,y:0,ease:Power2.InOut},8.5)
+    .to("#poly1tc",3,{scale:0.001,x:50,y:10,ease:Power2.InOut},8.5)
+    .to("#poly1td",3,{scale:0.001,x:10,y:60,ease:Power2.InOut},8.5)
+    .to("#poly2ta",3,{scale:0.001,x:50,y:50,ease:Power2.InOut},8.5)
+    .to("#poly2tb",3,{scale:0.001,x:0,y:0,ease:Power2.InOut},8.5)
+    .to("#poly2tc",3,{scale:0.001,x:50,y:10,ease:Power2.InOut},8.5)
+    .to("#poly2td",3,{scale:0.001,x:10,y:60,ease:Power2.InOut},8.5)
+    .to("#poly3ta",3,{scale:0.001,x:50,y:50,ease:Power2.InOut},8.5)
+    .to("#poly3tb",3,{scale:0.001,x:0,y:0,ease:Power2.InOut},8.5)
+    .to("#poly3tc",3,{scale:0.001,x:50,y:10,ease:Power2.InOut},8.5)
+    .to("#poly3td",3,{scale:0.001,x:10,y:60,ease:Power2.InOut},8.5)
+    .to("#poly4ta",3,{scale:0.001,x:50,y:50,ease:Power2.InOut},8.5)
+    .to("#poly4tb",3,{scale:0.001,x:0,y:0,ease:Power2.InOut},8.5)
+    .to("#poly4tc",3,{scale:0.001,x:50,y:10,ease:Power2.InOut},8.5)
+    .to("#poly4td",3,{scale:0.001,x:10,y:60,ease:Power2.InOut},8.5)
+
+    .to("#draco",10,{scale:3,opacity:1,x:580,y:300},8)
     .to("#wing2",.5,{transformOrigin:'80% 80%'},7.5)
     .to("#wing",.5,{transformOrigin:'100% 50%'},7.5)
     .to("#wing",.25,{rotationZ:180,repeat:12,yoyo:true,repeatDelay:0.25},8)
     .to("#wing2",.25,{rotationZ:180,repeat:12,yoyo:true,repeatDelay:0.25},8)
-    //.to("#wing",10,{transformOrigin:'100% 50%',rotationZ:180},8)
+    .to("#flame",.25,{opacity:1,repeat:12,yoyo:true,repeatDelay:0.25},8)
+
     //.to("#draco", 5, {bezier:{type:"cubic", values:[{x:0, y:0}, {x:50, y:50}, {x:50, y:-50}, {x:100, y:80}], autoRotate:["x","y","rotation",45,false]}, ease:Power1.easeInOut},8)
 
     ;

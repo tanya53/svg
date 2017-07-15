@@ -10,6 +10,7 @@
 
 svg {
   border: 2px solid red;
+  margin-left:100px;
 }
 path {
    stroke:black;
@@ -17,12 +18,31 @@ path {
    opacity:.5;
 }
 
-#poly1 {fill:red;}
-#poly2 {fill:blue;}
-#poly3 {fill:purple;}
-#poly4 {fill:yellow;}
-#polyt1,#polyt2,#polyt3,#polyt4,#polyt1a,
-#polyt2a,#polyt3a,#polyt4a {
+#poly1ta {fill:#ff0000;}
+#poly1tb {fill:#ff8080;}
+#poly1tc {fill:#ff3333;}
+#poly1td {fill:#b30000;}
+#poly2ta {fill:#00ccff;}
+#poly2tb {fill:#0099ff;}
+#poly2tc {fill:#0066ff;}
+#poly2td {fill:#0000ff;}
+#poly3ta {fill:#4d0099;}
+#poly3tb {fill:#6600cc;}
+#poly3tc {fill:#9933ff;}
+#poly3td {fill:#cc99ff;}
+#poly4ta {fill:#ffffb3;}
+#poly4tb {fill:#ffff66;}
+#poly4tc {fill:#ffff1a;}
+#poly4td {fill:#e6e600;}
+#polyc1a,#polyc1b,#polyc1c,#polyc1d, /*circles */
+#polyc2a,#polyc2b,#polyc2c,#polyc2d,
+#polyc3a,#polyc3b,#polyc3c,#polyc3d,
+#polyc4a,#polyc4b,#polyc4c,#polyc4d,
+#polyf1a,#polyf1b,#polyf1c,#polyf1d, /*flowers*/
+#polyf2a,#polyf2b,#polyf2c,#polyf2d,
+#polyf3a,#polyf3b,#polyf3c,#polyf3d,
+#polyf4a,#polyf4b,#polyf4c,#polyf4d
+ {
   visibility: hidden;
 }
 #draco {
@@ -30,4 +50,8 @@ path {
 }
 #dracoDot {
   fill:white;
+}
+.test {fill:yellow;}
+#flame {
+  opacity:0;
 }
