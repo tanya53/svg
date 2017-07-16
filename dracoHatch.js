@@ -2,12 +2,11 @@
 $(window).on('load',function(){
   var egg = $('#egg'),
       dracoDot = $('#dracoDot'),
-      poly1 = $('#poly1'),
-      poly2 = $('#poly2'),
-      poly3 = $('#poly3'),
-      poly4 = $('#poly4'),
+
       t2 = new TimelineLite(),
       tl = new TimelineLite();
+      var path = MorphSVGPlugin.pathDataToBezier("#motionPath");
+
   tl
     //egg pulse out in out
     .to(egg,2,{scale:5,transformOrigin:'50% 50%',ease:Power2.easeInOut})
@@ -83,21 +82,20 @@ $(window).on('load',function(){
     .to("#poly4tb",3,{scale:0.001,x:0,y:0,ease:Power2.InOut},8.5)
     .to("#poly4tc",3,{scale:0.001,x:50,y:10,ease:Power2.InOut},8.5)
     .to("#poly4td",3,{scale:0.001,x:10,y:60,ease:Power2.InOut},8.5)
-
-    .to("#draco",10,{scale:3,opacity:1,x:580,y:300},8)
+    .to("#draco",5,{scale:3,opacity:1},8)
+    //.to("#draco",10,{scale:3,opacity:1,x:580,y:300},8)
+    .to("#draco",10,{bezier:{values:path, type:"cubic"}},8)
     .to("#wing2",.5,{transformOrigin:'80% 80%'},7.5)
     .to("#wing",.5,{transformOrigin:'100% 50%'},7.5)
-    .to("#wing",.25,{rotationZ:180,repeat:12,yoyo:true,repeatDelay:0.25},8)
-    .to("#wing2",.25,{rotationZ:180,repeat:12,yoyo:true,repeatDelay:0.25},8)
+    .to("#wing",.25,{skewY:"85deg",repeat:12,yoyo:true,repeatDelay:0.25},8)
+    .to("#wing2",.25,{skewX:"-85deg",repeat:12,yoyo:true,repeatDelay:0.25},8)
     .to("#flame",.25,{opacity:1,repeat:12,yoyo:true,repeatDelay:0.25},8)
-
-    //.to("#draco", 5, {bezier:{type:"cubic", values:[{x:0, y:0}, {x:50, y:50}, {x:50, y:-50}, {x:100, y:80}], autoRotate:["x","y","rotation",45,false]}, ease:Power1.easeInOut},8)
-
     ;
+
     t2
     .to(".star",.35,{opacity:1,repeat:40,yoyo:true,repeatDelay:0.25},.5)
     .to(".star1",.25,{opacity:1,repeat:40,yoyo:true,repeatDelay:.35},.5)
     .to(".star2",.5,{opacity:1,repeat:40,yoyo:true,repearDelay:.15},.5)
-    //.repeat(10);
+    ;
 
 });
