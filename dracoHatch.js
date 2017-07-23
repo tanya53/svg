@@ -1,8 +1,7 @@
 $(window).on("load", function() {
   var egg = $("#egg"),
     dracoDot = $("#dracoDot"),
-    t2 = new TimelineMax(),
-    tl = new TimelineMax();
+    t1 = new TimelineMax();
   t3 = new TimelineMax();
   var path = MorphSVGPlugin.pathDataToBezier("#motionPath");
   t3 //dracodot moving inside egg
@@ -18,13 +17,19 @@ $(window).on("load", function() {
     //egg disappears so draco appears
     .to(dracoDot, 3, { opacity: 0, ease: Power2.easeInOut });
 
-  tl
+  t1
     //egg pulse out in out
-    .to(egg, 2, {
-      scale: 5,
-      transformOrigin: "50% 50%",
-      ease: Back.easeOut
-    })
+    .add("stars")
+    .to(
+      egg,
+      2,
+      {
+        scale: 5,
+        transformOrigin: "50% 50%",
+        ease: Back.easeOut
+      },
+      "stars"
+    )
     .to(egg, 2, { scale: 0.5, rotation: 720, ease: Power2.easeInOut })
     .to(egg, 2, { scale: 7, ease: Elastic.easeOut })
     //egg disappears so draco appears
@@ -265,26 +270,30 @@ $(window).on("load", function() {
       0.25,
       { opacity: 1, repeat: 12, yoyo: true, repeatDelay: 0.25 },
       "trans3-=1.75"
-    );
-
-  //stars -blink at varying speeds
-  t2
+    )
     .to(
       ".star",
       0.35,
       { opacity: 1, repeat: 40, yoyo: true, repeatDelay: 0.25 },
-      0.5
+      "stars"
     )
     .to(
       ".star1",
       0.25,
       { opacity: 1, repeat: 40, yoyo: true, repeatDelay: 0.35 },
-      0.5
+      "stars"
     )
     .to(
       ".star2",
       0.5,
       { opacity: 1, repeat: 40, yoyo: true, repearDelay: 0.15 },
-      0.5
+      "stars"
     );
+  var masterTimeline = new TimelineMax({
+    onComplete: function() {
+      masterTimeline.restart();
+    }
+  });
+
+  masterTimeline.add(t1, t3);
 });
