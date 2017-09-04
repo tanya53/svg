@@ -4,7 +4,7 @@ svg {
 #sp1,
 #sp2,
 #sp3,
-#spoutTop {
+#spoutTop,#kickWave {
   opacity: 0;
 }
 line {
@@ -16,3 +16,5 @@ line {
 body {
   background: linear-gradient(#b3d9ff 0%, #3399ff 45%, #000099 50%);
 }
+#whaleFrown,
+#whaleSmile{  visibility: hidden;}
